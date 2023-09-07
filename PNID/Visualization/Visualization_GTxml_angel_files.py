@@ -27,13 +27,15 @@ def parse_xml(xml_file):
     return objects_list
 
 # XML 폴더 경로
-xml_folder = r'E:\LeeYujeong\VCLab\PNID/xml출력코드+4-2점/검증A/XML'
+xml_folder = r'GT_XML'
 
 # 이미지 폴더 경로
-image_folder = r'E:\LeeYujeong\VCLab\PNID/visualization/JPG_20230228'
+image_folder = r'JPG_20230228'
 
 # 결과 이미지를 저장할 폴더 경로
-result_folder = r'right_result'
+result_folder = r'Visualization_GTxml_angle_files_result'
+if not os.path.exists(result_folder):
+    os.mkdir(result_folder)
 
 # XML 폴더 내의 모든 XML 파일에 대해 처리
 for xml_file in os.listdir(xml_folder):

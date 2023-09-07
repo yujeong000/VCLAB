@@ -64,11 +64,11 @@ def rbox2hbox(center_x, center_y, width, height):
 
 
 #4점 텍스트 파일이 들어있는 폴더 선택
-txt_folder = r'F:\VCLab\PNID\xml출력코드+4-2점\0831_txt_angle_annfiles'
+txt_folder = r'../Xml/annfiles_with_angle'
 # 이미지 폴더 경로
-image_folder = r'F:\VCLab\PNID/visualization/JPG_20230228'
+image_folder = r'JPG_20230228'
 # 결과를 저장할 폴더 경로
-output_folder = r'0831_txt_angle_result'
+output_folder = r'Visualization_txt_annfiles_with_angle'
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
