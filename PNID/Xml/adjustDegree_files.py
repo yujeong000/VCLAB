@@ -103,10 +103,10 @@ def adjust_angle(angle):
     return angle
 
 # XML 폴더 경로
-xml_folder = r'F:\VCLab\PNID\xml 병합\Merge\\'
+xml_folder = r'Txt2Xml_files_result'
 
 # 결과 xml을 저장할 폴더 경로
-output_folder = r'AdjustDegree'
+output_folder = r'AdjustDegree_files_result'
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
@@ -118,7 +118,7 @@ for xml_file in os.listdir(xml_folder):
 
     #각도 보정
     for obj in objects_list:
-        degree = int(obj['degree'])
+        degree = float(obj['degree'])
         degree = adjust_angle(degree)
         obj['degree'] = str(degree)
         

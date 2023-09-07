@@ -11,6 +11,7 @@ Created on Wed Aug 30 16:27:50 2023
 - 코드 리팩토링
 - read_four_point_txt 함수 수정(빈 요소 삭제 코드 추가)
 - cal_degree(각도 계산) 코드 수정
+- 각도 부호 바꿔서 출력
 
 """
 
@@ -83,6 +84,8 @@ def cal_degree(after, center):
     
     radian = math.atan2(y, x);
     degree = math.degrees(radian)
+    if degree != 0:
+        degree *= -1
     return degree
 
 def rbox2hbox(center_x, center_y, width, height):
@@ -149,12 +152,12 @@ def create_xml(class_type_map, fourPoint, objects_list, output_file_path):
 
 
 #4점 텍스트 파일이 들어있는 폴더 선택
-txt_folder = r'F:\VCLab\PNID\xml출력코드+4-2점\0829_annfiles'
+txt_folder = r'annfiles'
 #class_type 매핑 텍스트 파일 선택
-class_file = r'F:\VCLab\PNID/xml출력코드+4-2점/SymbolClass_Type.txt'
+class_file = r'SymbolClass_Type.txt'
 class_type_map = create_class_type_map(class_file)
 # 결과 xml을 저장할 폴더 경로
-output_folder = r'0829_result'
+output_folder = r'Txt2Xml_files_result'
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
