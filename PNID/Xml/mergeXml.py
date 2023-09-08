@@ -99,16 +99,17 @@ def create_xml(objects_list, filename):
 
     return output_filename
 
+filename = r'26071-200-M6-052-00003.xml'
+
 # 큰 심볼 XML 폴더 경로
-large_xml_file = r'F:\VCLab\PNID\xml 병합\Large\26071-200-M6-052-00001.xml'
+large_xml_file = 'Txt2Xml_files_Big_symbol_result\\' + filename
 # 작은 심볼 XML 폴더 경로
-small_xml_file = r'F:\VCLab\PNID\xml 병합\Small\26071-200-M6-052-00001.xml'
+small_xml_file = 'Txt2Xml_files_result\\' + filename
 # 결과 xml을 저장할 폴더 경로
-output_folder = r'0829_result'
+output_folder = r'mergeXml_result'
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
-filename = '26071-200-M6-052-00001.xml'
 
 large_objects_list = parse_xml(large_xml_file)
 small_objects_list = parse_xml(small_xml_file)

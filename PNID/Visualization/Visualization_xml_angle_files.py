@@ -59,10 +59,10 @@ def rotate_bbox(obj):
     point3 = [point3[0]-center_x, point3[1]-center_y]
     point4 = [point4[0]-center_x, point4[1]-center_y]
     
-    point1 = rotate(point1, degree)
-    point2 = rotate(point2, degree)
-    point3 = rotate(point3, degree)
-    point4 = rotate(point4, degree)
+    point1 = rotate(point1, degree*-1)
+    point2 = rotate(point2, degree*-1)
+    point3 = rotate(point3, degree*-1)
+    point4 = rotate(point4, degree*-1)
     
     point1 = [point1[0]+center_x, point1[1]+center_y]
     point2 = [point2[0]+center_x, point2[1]+center_y]
